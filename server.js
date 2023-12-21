@@ -14,19 +14,20 @@ const PORT = process.env.PORT || 3026
 
 const dominiosPermitdios =['http://localhost:5173'];
 
-const corsOption = {
-  origin: function(origin, callback) {
-    if(dominiosPermitdios.indexOf(origin) !== -1){
-      //el origen está permitido
-      callback(null, true)
-    }else {
-      callback(new Error('No permitido por CORS'))
-    }
-  }
-}
+// const corsOption = {
+//   origin: function(origin, callback) {
+//     if(dominiosPermitdios.indexOf(origin) !== -1){
+//       //el origen está permitido
+//       callback(null, true)
+//     }else {
+//       callback(new Error('No permitido por CORS'))
+//     }
+//   }
+// }
 
+//corsOption
 //middlewares
-app.use(cors(corsOption))
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
