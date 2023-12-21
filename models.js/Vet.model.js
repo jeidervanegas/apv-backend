@@ -36,7 +36,7 @@ const vetSchema = new Schema({
     },
     confirm: {
         type: Boolean,
-        default: false,
+        default: true,
     },
 }, {
     timestamps: true,
