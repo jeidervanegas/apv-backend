@@ -228,6 +228,7 @@ vetCtrl.updatePassword = async (req, res) => {
     vet.password = pwd_new;
     await vet.save()
 
+    
     res.json({
       msg: 'Contraseña almacenada correctamente'
     })
