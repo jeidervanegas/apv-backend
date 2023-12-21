@@ -11,7 +11,8 @@ const emailRegister = async(datos) => {
       });
 
       const { email, name, token } = datos;
-
+      console.log(process.env.FRONTEND_URL);
+  
       //enviar el emial
       try {
         const info = await transport.sendMail({
@@ -25,7 +26,7 @@ const emailRegister = async(datos) => {
           <p>Si tú no creaste esta cuenta puedes ignorar este mensaje</p>
           `
         });
-  
+        
         console.log('Mensaje enviado: %s', info.messageId);
       } catch (error) {
         console.log(error);
