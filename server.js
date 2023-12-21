@@ -28,7 +28,7 @@ const corsOption = {
 //middlewares
 app.use(cors(corsOption))
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true }));
 
 //routes
 app.use('/api/veterinarians', userRoutes);
